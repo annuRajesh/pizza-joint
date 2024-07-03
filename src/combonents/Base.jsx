@@ -7,7 +7,9 @@ const Base=()=>{
     const navigate=useNavigate();
     
    const handleSubmit=()=>{
-    axios.post('http://localhost:5000/api/base',{base:selectedBase}).then(res=>{ navigate('./sauce')}
+    axios.post('http://localhost:5000/api/base',{base:selectedBase}).then(res=>{ navigate('/sauce')
+        console.log({selectedBase})
+    }
        
 
     )

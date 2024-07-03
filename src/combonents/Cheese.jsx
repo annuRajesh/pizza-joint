@@ -1,17 +1,30 @@
 import { useNavigate } from 'react-router-dom';
 import './base.css'
+import axios from 'axios';
+import { useState } from 'react';
 const Cheese=()=>{
+    const [SelectedCheese,setSelectedCheese]=useState('')
     const navigate=useNavigate();
+   
     const handleSubmit=()=>{
+       axios.post("http://localhost:5000/api/cheese",{cheese:SelectedCheese}).then(res=>{
         navigate('/meat')
+        console.log('cheese selected',SelectedCheese)
+       })
     }
     return(
         <div className='container'>
             <h1>Choose a cheese</h1>
             <ul>
-                <li>cheddar</li>
-                <li>Mozzarella</li>
-                <li>Parmesan</li>
+                <li onClick={()=>{
+                    setSelectedCheese('cheddar')
+                }}>cheddar</li>
+                <li onClick={()=>{
+                    setSelectedCheese('Mozzarella')
+                }}>Mozzarella</li>
+                <li onClick={()=>{
+                    setSelectedCheese('Parmesan')
+                }}>Parmesan</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
         </div>
