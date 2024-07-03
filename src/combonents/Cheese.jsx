@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './base.css'
 import axios from 'axios';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 const Cheese=()=>{
     const [SelectedCheese,setSelectedCheese]=useState('')
     const navigate=useNavigate();
@@ -13,7 +14,7 @@ const Cheese=()=>{
        })
     }
     return(
-        <div className='container'>
+        <motion.div className='container'>
             <h1>Choose a cheese</h1>
             <ul>
                 <li onClick={()=>{
@@ -43,7 +44,7 @@ const Cheese=()=>{
                 >Parmesan</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
-        </div>
+        </motion.div>
     )
 }
 export default Cheese

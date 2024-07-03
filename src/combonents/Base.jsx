@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import './base.css'
 import axios from 'axios';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 const Base=()=>{
     const [selectedBase,setselectedbase]=useState('')
     const navigate=useNavigate();
@@ -16,23 +17,36 @@ const Base=()=>{
 
    }
     return(
-        <div className="container">
+        <motion.div className="container"
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:1}}
+       
+        
+        
+        >
             <h1>Choose a crust</h1>
             <ul>
                 <li onClick={()=>{
                     setselectedbase('store-bought dough');
 
-                }}>store-bought dough</li>
+                }}
+                style={{
+                    
+                    color:selectedBase=='store-bought dough'?'green':'black'
+                }}
+                
+                >store-bought dough</li>
                 <li onClick={()=>{
                     setselectedbase('biscuits')
                 }}
                 style={{
-                    cursor:'pointer',
+                    
                     color:selectedBase=='biscuits'?'green':'black'
                 }}>biscuits</li>
                 <li onClick={()=>setselectedbase('hoagies')}
                 style={{
-                    cursor:'pointer',
+                    
                     color:selectedBase=='hoagies'?'green':'black'
                 }}
                 >hoagies</li>
@@ -40,7 +54,7 @@ const Base=()=>{
                     setselectedbase('English muffins')
                 }}
                 style={{
-                    cursor:'pointer',
+                   
                     color:selectedBase=='English muffins'?'green':'black'
                 }}
                 >English muffins</li>
@@ -48,13 +62,13 @@ const Base=()=>{
                     setselectedbase('flatbread')
                 }}
                 style={{
-                    cursor:'pointer',
+                   
                     color:selectedBase=='flatbread'?'green':'black'
                 }}
                 >flatbread</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
-        </div>
+        </motion.div>
     )
 }
 export default Base

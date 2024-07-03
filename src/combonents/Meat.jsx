@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './base.css'
 import { useState } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 const Meat=()=>{
     const navigate=useNavigate();
     const [selectedMeat,setSelectedMeat]=useState([])
@@ -18,7 +19,12 @@ const Meat=()=>{
         }
     }
     return(
-        <div className='container'>
+        <motion.div className='container'
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:1}}
+       
+        >
             <h1>Choose some Meat</h1>
             <ul>
                 <li onClick={()=>{handleSelect('pepporoni')
@@ -48,7 +54,7 @@ const Meat=()=>{
             </ul>
             <button onClick={handleSubmit}>Next</button>
 
-        </div>
+        </motion.div>
     )
 }
 export default Meat

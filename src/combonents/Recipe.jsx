@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-
+import { motion } from "framer-motion"
 const Recipe=()=>{
 
     const [recipe,setRecipe]=useState({
@@ -19,7 +19,12 @@ const Recipe=()=>{
         })
     },[])
     return(
-        <div className='container'>
+        <motion.div className='container'
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:1}}
+       
+        >
             <h1>Make Your Custom Pizza</h1>
             <ol>
                 <li>
@@ -40,7 +45,7 @@ const Recipe=()=>{
                 
             </ol>
 
-        </div>
+        </motion.div>
     )
 
 }

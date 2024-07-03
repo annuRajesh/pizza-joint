@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './base.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
 const Toppings=()=>{
     const navigate=useNavigate()
     const  items=['pineapple',
@@ -29,7 +31,7 @@ const Toppings=()=>{
         }
 
     return(
-        <div className='container'>
+        <motion.div className='container'>
             <h1>Choose your toppings</h1>
             <ul>
                 {
@@ -45,7 +47,7 @@ const Toppings=()=>{
                 }
             </ul>
             <button onClick={handleSubmit}>Generate Recipe</button>
-        </div>
+        </motion.div>
        
 
     )

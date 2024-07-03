@@ -9,6 +9,7 @@ import Sauce from './combonents/Sauce'
 import Cheese from './combonents/Cheese'
 import Meat from './combonents/Meat'
 import Recipe from './combonents/Recipe'
+import { motion } from 'framer-motion'
 
 function App() {
  
@@ -52,12 +53,27 @@ function Home() {
   const handleClick = () => {
     navigate('/base'); // Navigate to the base selection page
   };
-
+  
   return (
-    <div>
-      <h1>Welcome to the Pizza Builder!</h1>
-      <button onClick={handleClick}>Start Building Your Pizza</button>
-    </div>
+    <motion.div className='container'
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    transition={{delay:1}}
+   
+    
+    >
+      <motion.h1 animate={
+        {fontSize:100,
+          
+        }
+      }>Welcome to the Pizza Builder!</motion.h1>
+      <motion.button onClick={handleClick}
+      animate={{
+
+      }}
+      
+      >Start Building Your Pizza</motion.button>
+    </motion.div>
   );
 }
 
