@@ -12,6 +12,12 @@ body{
 
 }
 h1{
+    padding: 20px;
+}
+.heading{
+   font-size: 40px;
+   font-weight: 700;
+    
     margin: 30px;
     padding: 10px;
 }
@@ -65,4 +71,47 @@ button:focus{
     border: none;
     background-color: #f5efdb;
     color: #1a3550;
+}
+ul{
+    
+}
+@media  only screen and (max-width:499px) {
+    .container{
+        width:350px;
+
+    }
+    h1{
+        color: #702424;
+       
+    }
+    button{
+        width: 200px;
+        padding: 20px;
+    }
+    li{
+        padding: 10px;
+    }
+
+    
+}
+@media screen and (max-width:415px) {
+    .container{
+        width:250px;
+
+    }
+    .heading{
+        
+    }
+   
+    button{
+        width: 200px;
+       
+    }
+    li{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+
+    
 }

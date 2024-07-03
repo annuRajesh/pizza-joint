@@ -15,7 +15,7 @@ const Sauce=()=>{
     }
     return(
         <div className='container'>
-            <h1>Choose a sauce</h1>
+            <h1 className='heading'>Choose a sauce</h1>
             <ul>
                 <li onClick={()=>setSelectedsauce('Marinara')
 
