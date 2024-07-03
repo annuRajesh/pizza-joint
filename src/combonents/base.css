@@ -28,7 +28,7 @@ h1{
     height: 120px;
 }
 li:hover{
-    transform: scale(1.2);
+   
     cursor: pointer;
     font-weight: bold;
 

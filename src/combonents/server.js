@@ -40,3 +40,6 @@ app.post('/api/toppings',(req,res)=>{
     selectedItems.toppings=toppings
     res.json({message:'toppings selected'})
 })
+app.get('/api/recipe', (req, res) => {
+    res.json(selectedItems);
+});

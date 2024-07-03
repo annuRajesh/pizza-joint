@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './base.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const Toppings=()=>{
+    const navigate=useNavigate()
     const  items=['pineapple',
         'fresh basil',
         'tomatoes',
@@ -14,7 +16,8 @@ const Toppings=()=>{
         const handleSubmit=()=>{
             axios.post("http://localhost:5000/api/toppings",{toppings:selectedtoppings}).then(res=>{
                 console.log("toppings selected:",selectedtoppings),
-                console.log(res.data)
+                console.log(res.data),
+                navigate('/recipe')
             }
                 
             )

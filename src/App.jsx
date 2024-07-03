@@ -8,7 +8,7 @@ import Base from './combonents/Base'
 import Sauce from './combonents/Sauce'
 import Cheese from './combonents/Cheese'
 import Meat from './combonents/Meat'
-import HeaderContainer from './combonents/Header'
+import Recipe from './combonents/Recipe'
 
 function App() {
  
@@ -35,6 +35,7 @@ function App() {
   <Route path='/cheese' element={<Cheese/>}/>
   <Route path="/meat" element={<Meat/>}/>
   <Route path="/toppings" element={<Toppings/>}/>
+  <Route path='/recipe' element={<Recipe/>}/>
 </Routes>
 </div>
 </div>

@@ -19,11 +19,38 @@ const Sauce=()=>{
             <ul>
                 <li onClick={()=>setSelectedsauce('Marinara')
 
-                }>Marinara</li>
-                <li onClick={()=>setSelectedsauce('Alfredo')}>Alfredo</li>
-                <li onClick={()=>setSelectedsauce('BBQ')}>BBQ</li>
-                <li onClick={()=>setSelectedsauce('Cheese')}>Cheese</li>
-                <li onClick={()=>setSelectedsauce('Pesto')}>Pesto</li>
+                }
+                style={{
+                    cursor:'pointer',
+                    color:selecetSauce=='Marinara'?'green':'black'
+                }}
+                >Marinara</li>
+                <li onClick={()=>setSelectedsauce('Alfredo')}
+                    style={{
+                        cursor:'pointer',
+                        color:selecetSauce=='Alfredo'?'green':'black'
+                    }}
+                    >Alfredo</li>
+                <li onClick={()=>setSelectedsauce('BBQ')}
+                 style={{
+                    cursor:'pointer',
+                    color:selecetSauce=='BBQ'?'green':'black'
+                }}
+                    
+                    >BBQ</li>
+                <li onClick={()=>setSelectedsauce('Cheese')}
+                 style={{
+                    cursor:'pointer',
+                    color:selecetSauce=='Cheese'?'green':'black'
+                }}
+                    
+                    >Cheese</li>
+                <li onClick={()=>setSelectedsauce('Pesto')}
+                     style={{
+                        cursor:'pointer',
+                        color:selecetSauce=='Pesto'?'green':'black'
+                    }}
+                    >Pesto</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
         </div>

@@ -18,13 +18,29 @@ const Cheese=()=>{
             <ul>
                 <li onClick={()=>{
                     setSelectedCheese('cheddar')
-                }}>cheddar</li>
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:SelectedCheese=='cheddar'?'green':'black'
+                }}
+                >cheddar</li>
                 <li onClick={()=>{
                     setSelectedCheese('Mozzarella')
-                }}>Mozzarella</li>
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:SelectedCheese=='Mozzarella'?'green':'black'
+                }}
+                >Mozzarella</li>
                 <li onClick={()=>{
                     setSelectedCheese('Parmesan')
-                }}>Parmesan</li>
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:SelectedCheese=='Parmesan'?'green':'black'
+                }}
+                
+                >Parmesan</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
         </div>

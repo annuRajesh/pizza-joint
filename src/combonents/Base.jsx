@@ -20,20 +20,38 @@ const Base=()=>{
             <h1>Choose a crust</h1>
             <ul>
                 <li onClick={()=>{
-                    selectedBase('store-bought dough');
+                    setselectedbase('store-bought dough');
 
                 }}>store-bought dough</li>
                 <li onClick={()=>{
                     setselectedbase('biscuits')
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:selectedBase=='biscuits'?'green':'black'
                 }}>biscuits</li>
                 <li onClick={()=>setselectedbase('hoagies')}
+                style={{
+                    cursor:'pointer',
+                    color:selectedBase=='hoagies'?'green':'black'
+                }}
                 >hoagies</li>
                 <li onClick={()=>{
                     setselectedbase('English muffins')
-                }}>English muffins</li>
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:selectedBase=='English muffins'?'green':'black'
+                }}
+                >English muffins</li>
                 <li onClick={()=>{
                     setselectedbase('flatbread')
-                }}>flatbread</li>
+                }}
+                style={{
+                    cursor:'pointer',
+                    color:selectedBase=='flatbread'?'green':'black'
+                }}
+                >flatbread</li>
             </ul>
             <button onClick={handleSubmit}>Next</button>
         </div>
