@@ -62,11 +62,7 @@ function Home() {
    
     
     >
-      <motion.h1 animate={
-        {fontSize:100,
-          
-        }
-      }>Welcome to the Pizza Builder!</motion.h1>
+      <motion.h1>Welcome to the Pizza Builder!</motion.h1>
       <motion.button onClick={handleClick}
       animate={{
 
