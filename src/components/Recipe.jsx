@@ -11,7 +11,7 @@ const Recipe=()=>{
         toppings:[]
     })
     useEffect(()=>{
-        axios.get(`${VITE_BACKEND_URL}/api/recipe`
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/recipe`
         ).then(res=>{
             setRecipe(res.data)
         }).catch(err=>{

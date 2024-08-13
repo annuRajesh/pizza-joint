@@ -8,7 +8,7 @@ const Sauce=()=>{
     const [selecetSauce,setSelectedsauce]=useState('')
     const navigate=useNavigate();
     const handleSubmit=()=>{
-       axios.post(`${VITE_BACKEND_URL}/api/sauce`,{sauce:selecetSauce}).then(
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/sauce`,{sauce:selecetSauce}).then(
         res=>{
             navigate('/cheese')
             console.log("sauce chosen:",selecetSauce)

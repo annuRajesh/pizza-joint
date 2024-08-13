@@ -7,7 +7,7 @@ const Meat=()=>{
     const navigate=useNavigate();
     const [selectedMeat,setSelectedMeat]=useState([])
     const handleSubmit=()=>{
-        axios.post(`${VITE_BACKEND_URL}/api/meat`,{meat:selectedMeat}).then(
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/meat`,{meat:selectedMeat}).then(
             console.log("meat selected:",selectedMeat),
         navigate('/toppings')
     

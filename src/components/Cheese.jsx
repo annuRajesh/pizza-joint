@@ -8,7 +8,7 @@ const Cheese=()=>{
     const navigate=useNavigate();
    
     const handleSubmit=()=>{
-       axios.post(`${VITE_BACKEND_URL}/api/cheese`,{cheese:SelectedCheese}).then(res=>{
+       axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/cheese`,{cheese:SelectedCheese}).then(res=>{
         navigate('/meat')
         console.log('cheese selected',SelectedCheese)
        })
