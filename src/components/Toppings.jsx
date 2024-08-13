@@ -16,7 +16,7 @@ const Toppings=()=>{
         'bell peppers']
         const [selectedtoppings,setSelectedToppings]=useState([])
         const handleSubmit=()=>{
-            axios.post("http://localhost:5000/api/toppings",{toppings:selectedtoppings}).then(res=>{
+            axios.post(`${VITE_BACKEND_URL}/api/toppings`,{toppings:selectedtoppings}).then(res=>{
                 console.log("toppings selected:",selectedtoppings),
                 console.log(res.data),
                 navigate('/recipe')
